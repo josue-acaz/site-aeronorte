@@ -1108,18 +1108,20 @@ label#thumbnail.has-thumbnail img {
   width: 100%;
   background: #fff;
   position: relative;
-  display: grid;
+  /*display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-gap: 5px;
+  grid-gap: 5px;*/
 }
 .project {
   position: relative;
   background: #FFFFFF;
   overflow: hidden;
+  height: 200px;
 }
 .project img {
   position: absolute;
   opacity: 0.9;
+  height: 200px;
 }
 .project p {
   position: absolute;
@@ -1491,4 +1493,15 @@ label#thumbnail.has-thumbnail img {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*Responsive gallery*/
+.sm-col {
+  margin-right: 0px;
+  right: 16px;
+  padding-right: 6px;
+  margin-left: 0px;
+  left: 16px;
+  padding-left: 0px;
+  padding-top: 6px;
 }
