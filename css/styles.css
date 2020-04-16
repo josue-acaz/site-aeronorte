@@ -648,6 +648,7 @@ input[type='checkbox'] {
 	margin-top: 0.75rem;
 }
 
+/*MUDAR AQUI COR DO ACCOUNT DROPDOWN*/
 .navbar-custom .nav-item .nav-link {
 	padding: 0 0.75rem 0 0.75rem;
 	color: #003f7d;
@@ -694,7 +695,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item:hover {
-	background-color: #003f7d;
+	background-color: #e4effa;
 }
 
 .navbar-custom .dropdown-item .item-text {
@@ -1567,6 +1568,10 @@ a:hover.back-to-top {
 	}
 
 	.navbar-custom .nav-item .index {
+		color: #FFFFFF;
+	}
+
+	.navbar-custom .nav-item .differ {
 		color: #FFFFFF;
 	}
 
