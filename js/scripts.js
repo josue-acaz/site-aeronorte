@@ -92,15 +92,15 @@
     /* Image Slider - Swiper */
     var imageSlider = new Swiper('.image-slider', {
         autoplay: {
-            delay: 2000,
+            delay: 3200,
             disableOnInteraction: false
 		},
-        loop: false,
+        loop: true,
         navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-        spaceBetween: 30,
+        /*spaceBetween: 30,
         slidesPerView: 5,
 		breakpoints: {
             // when window is <= 380px
@@ -128,7 +128,7 @@
                 slidesPerView: 5,
                 spaceBetween: 30
             },
-        }
+        }*/
     });
 
 

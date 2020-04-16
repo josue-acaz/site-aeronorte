@@ -26,7 +26,8 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 	
@@ -52,7 +53,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> 
+        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo_new.png" alt="alternative"></a> 
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,13 +65,16 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll single" href="index.html#header">INICIO <span class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll single" href="index.html#header">INÍCIO<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll single" href="index.html#about">SOBRE<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll single" href="index.html#features">RECURSOS DO APP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll single" href="index.html#preview">AERONAVES</a>
+                    <a class="nav-link page-scroll single" href="index.html#aircrafts">AERONAVES</a>
                 </li>
 
                 <!-- Dropdown Menu -->          
@@ -116,14 +120,16 @@
                         <div class="tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade show active" id="v-pills-information" role="tabpanel" aria-labelledby="v-pills-information-tab">
 
-                                <label 
-                                    id="thumbnail" 
-                                    style="background: url('images/testimonial-3.jpg'); background-repeat: no-repeat; background-size: cover;"
-                                    class="thumbnail"
-                                >
-                                    <input type="file" onchange="upload($event)">
-                                    <img src="images/camera.svg" alt="Select image">
-                                </label>
+                                <div class="thumbnail" id="thumbnail">
+                                    <div class="thumbnail__container">
+                                        <div id="thumbnail-image" class="thumbnail__img"></div>
+                                        <div class="thumbnail__content">
+                                            <a id="edit-thumbnail" class="thumbnail__caption thumbnail-btn">
+                                                <i style="color: white;" class="fas fa-pen"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <form id="user-form">
                                     <h5 class="subtitle">Obrigatórias</h5>
@@ -143,7 +149,7 @@
                                     </div>
                 
                                     <hr/>
-                                    <h5 class="subtitle">Opcionais</h5>
+                                    <!--<h5 class="subtitle">Opcionais</h5>-->
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label class="label-input" for="cpf">CPF</label>
@@ -283,6 +289,7 @@
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/jquery.mask.min.js"></script> <!-- jQuery Mask for input forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/dropzone.js"></script> <!--DROP ZONE UPLOAD-->
     <script src="./account.bundle.js"></script> <!--Account bundle script-->
     
 </body>

@@ -45,14 +45,13 @@
     </div>
     <!-- end of preloader -->
     
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/small-logo-aeronorte.svg" alt="alternative"></a> 
+        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo_new.png" alt="alternative"></a> 
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,13 +63,16 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll single" href="index.html#header">INICIO <span class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll single" href="index.html#header">INÍCIO<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll single" href="index.html#about">SOBRE<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll single" href="index.html#features">RECURSOS DO APP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll single" href="index.html#preview">AERONAVES</a>
+                    <a class="nav-link page-scroll single" href="index.html#aircrafts">AERONAVES</a>
                 </li>
 
                 <!-- Dropdown Menu -->          
@@ -102,8 +104,8 @@
                     </div>
                     <div class="container-login">
                         <div class="login-content">
-                            <div class="login-center-content">
-                                <img class="logo-aeronorte" src="./images/logo_aeronorte.svg" alt="logo aeronorte">
+                            <div style="padding-bottom: 30px;" class="login-center-content">
+                                <img class="logo-aeronorte" src="./images/logo_new.png" alt="logo aeronorte">
                             </div>
                             <form class="form-login" id="form-login" action="index.html">
                                 <div class="check-form">
@@ -128,6 +130,11 @@
                                 
                                 <p style="color: #262431; font-weight: bold;">Não possui uma conta?</p>
                                 <a href="signup.html" style="color:blue">Cadastre-se</a>
+
+                                <!--LOADER-->
+                                <div id="loader" style="text-align: center;">
+                                    <!--INSERIR AQUI-->
+                                </div>
 
                                 <div class="login-center-content">
                                     <button type="submit" class="btn btn-submit button2">ENTRAR</button>

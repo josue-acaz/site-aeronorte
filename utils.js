@@ -14,7 +14,7 @@ const utils = {
     }   
     else {   
         return undefined;
-    }   
+    }
   }
 };
 
