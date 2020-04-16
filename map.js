@@ -107,8 +107,9 @@ function initMap() {
     rotateControl: false,
     fullscreenControl: true,
     scrollwheel: false,
+    draggable: true,
     options: {
-      gestureHandling: 'greedy'
+      gestureHandling: 'cooperative'
     }
   });
 
