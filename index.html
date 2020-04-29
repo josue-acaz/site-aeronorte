@@ -25,6 +25,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+    
+    <!--GIJGO START-->
+    <link href="css/gijgo.css" rel="stylesheet">
+    <!--GIJGO END-->
+
     <link href="css/all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
     <link href="css/magnific-popup.css" rel="stylesheet">
@@ -117,22 +122,22 @@
                     <div style="padding-top: 80px;">
                         <div class="search-flight-inputs">
                             <h4 style="text-align: center; padding-bottom: 10px;">Reserve seu voo</h4>
-                                <form>
+                                <form id="search-form">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label class="label-input-search" for="name">CIDADE DE ORIGEM</label>
+                                                <label class="label-input-search" for="city-origin">CIDADE DE ORIGEM</label>
                                                 <div class="input-with-icon">
-                                                    <input type="text" id="name" placeholder="Experimente 'Santarém-PA'">
+                                                    <input type="text" id="city-origin" placeholder="Experimente 'Santarém-PA'">
                                                     <i style="padding-top: 15px;" class="fas fa-plane-departure"></i>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label class="label-input-search" for="email">CIDADE DE DESTINO</label>
+                                                <label class="label-input-search" for="city-destination">CIDADE DE DESTINO</label>
                                                 <div class="input-with-icon">
-                                                    <input type="text" id="email" placeholder="Ex.: Belém-PA">
+                                                    <input type="text" id="city-destination" placeholder="Ex.: Belém-PA">
                                                     <i style="padding-top: 15px;" class="fas fa-plane-arrival"></i>
                                                 </div>
                                             </div>
@@ -140,15 +145,13 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <div class="check-form">
-                                                <label class="check-option">
-                                                    <input type="radio" class="option-input radio" name="example" checked />
-                                                    Ida e volta
-                                                </label>
-                                                <label class="check-option">
-                                                    <input type="radio" class="option-input radio" name="example" />
-                                                    Somente Ida
-                                                </label>
+                                            <div class="md-radio md-radio-inline">
+                                                <input id="roundtrip" type="radio" name="trip" value="round-trip" checked>
+                                                <label for="roundtrip">Ida e Volta</label>
+                                            </div>
+                                            <div class="md-radio md-radio-inline">
+                                                <input id="oneway" type="radio" name="trip" value="one-way">
+                                                <label for="oneway">Somente Ida</label>
                                             </div>
                                         </div>
                                     </div>
@@ -156,18 +159,19 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label class="label-input-search" for="name">IDA</label>
+                                                <label class="label-input-search" for="departure-date">IDA</label>
+                                                
                                                 <div class="input-with-icon">
-                                                    <input type="datetime" id="name" placeholder="Selecione a data da ida">
+                                                    <input class="custom-input-search" type="datetime" id="datetimepicker1" onchange="console.log('Ok')" placeholder="Selecione a data da ida">
                                                     <i style="padding-top: 18px;" class="material-icons">calendar_today</i>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label class="label-input-search" for="name">VOLTA</label>
+                                                <label class="label-input-search" for="return-date">VOLTA</label>
                                                 <div class="input-with-icon">
-                                                    <input type="datetime" id="email" placeholder="Selecione a data da volta">
+                                                    <input class="custom-input-search" type="datetime" id="datetimepicker2" placeholder="Selecione a data da volta">
                                                     <i style="padding-top: 18px;" class="material-icons">calendar_today</i>
                                                 </div>
                                             </div>
@@ -178,14 +182,14 @@
                                             <div class="form-group">
                                                 <label class="label-input-search" for="name">NÚMERO DE PASSAGEIROS</label>
                                                 <div class="input-with-icon">
-                                                    <input type="number" id="name" placeholder="Número de passageiros">
+                                                    <input type="number" id="passengers" placeholder="Número de passageiros">
                                                     <i style="font-size: 28px" class="material-icons">airline_seat_recline_normal</i>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                     
-                                    <button class="btn btn-submit button2" type="submit">BUSCAR VOOS</button>
+                                    <button id="search-flight-btn" class="btn btn-submit button2" type="submit">BUSCAR VOOS</button>
                                 </form>
                             </div>
                     </div>
@@ -729,7 +733,7 @@
     <!-- end of statistics -->
 
     <!-- Contact -->
-    <div id="contact" class="form">
+    <!--<div id="contact" class="form">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -740,13 +744,13 @@
                         <li><i class="fas fa-phone"></i><a class="blue" href="tel:003024630820">+55 (93) 99147-9860</a></li>
                         <li><i class="fas fa-envelope"></i><a class="blue" href="mailto:contato@aeronorte.com">contato@aeronorte.com</a></li>
                     </ul>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
+                </div>
+            </div>
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
+                <div class="col-lg-6 offset-lg-3">-->
                     
                     <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
+                    <!--<form id="contactForm" data-toggle="validator" data-focus="false">
                         <div class="form-group">
                             <input type="text" class="form-control-input" id="cname" required>
                             <label class="label-control" for="cname">Nome completo</label>
@@ -772,19 +776,19 @@
                         <div class="form-message">
                             <div id="cmsgSubmit" class="h3 text-center hidden"></div>
                         </div>
-                    </form>
+                    </form>-->
                     <!-- end of contact form -->
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form -->
+   <!--             </div>
+            </div>
+        </div>
+    </div>-->
     <!-- end of contact -->
 
     <!-- map -->
-    <div class="map">
+   <!-- <div class="map">
         <div id="map"></div>
-    </div> <!-- end of map -->
+    </div>--> <!-- end of map -->
 
     <!-- Footer -->
     <div class="footer footer-border">
@@ -866,6 +870,10 @@
     	
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <!--GIJGO START-->
+    <script src="js/gijgo.js"></script>
+    <script src="js/messages.pt-br.js"></script>
+    <!--GIJGO END-->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
@@ -874,9 +882,9 @@
     <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <script src="./main.bundle.js"></script> <!--Main script-->
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtBaIgRE3kk6LrkqW8jNZWjeGpe5XRuY&callback=initMap" async defer></script>
-    <script src="./map.js"></script> <!--Google maps-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiGTLiKNW40Hcp9OEEFZ6lNZnD2U0zEGs&libraries=places" async defer></script> <!--&callback=initMap-->
+    <!--<script src="./map.js"></script>--> <!--Google maps-->
+    <script src="./main.bundle.js"></script> <!--Main script-->
 </body>
 </html>

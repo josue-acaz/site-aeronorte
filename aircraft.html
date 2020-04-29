@@ -61,7 +61,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link page-scroll single" href="dashboard.html">Inicio<span class="sr-only">(current)</span></a>
+                <a class="nav-link page-scroll single" href="dashboard.html">Inicio</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link page-scroll single" href="#">Mensagens</a>
@@ -70,10 +70,10 @@
                 <a class="nav-link page-scroll single" href="#">Reservas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link page-scroll single" href="aircraft.html">Aeronaves</a>
+              <a style="color: #00c9db;" class="nav-link page-scroll single" href="#">Aeronaves</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link page-scroll single" href="#">Voos</a>
+              <a class="nav-link page-scroll single" href="flight.html">Voos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link page-scroll single" href="#">Equipe</a>
@@ -88,6 +88,7 @@
 
         <ul class="navbar-nav my-2 my-lg-0">
           <li id="account-single" class="nav-item dropdown ml-auto index">
+              <button id="add-aircraft-button" class="btn-add">NOVA AERONAVE <i class="fas fa-plus"></i></button>
             <button class="btn-dashboard-navbar">
               <img class="img-dashboard-profile" src="images/user_logo.png" alt="dashboard profile img">
             </button>
@@ -109,44 +110,124 @@
     <header id="header" class="ex-header">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                  <h4 class="title-max-account">AERONAVES</h4>
+                <!--<div class="col-md-12">
+                  <h4 style="text-align: center;" class="title-max-account">AERONAVES</h4>
+                </div>-->
+                <div class="container" style="margin-bottom: 50px;">
+                  <div id="main-dashboard" class="main-dashboard">
+            
+                    <div id="aircraft-list"> <!--class="table"-->
+                      <div class="row-list header">
+                        <div class="cell">
+                          Modelo
+                        </div>
+                        <div class="cell">
+                          Tripulação
+                        </div>
+                        <div class="cell">
+                          Número de passageiros
+                        </div>
+                        <div class="cell">
+                          Velocidade de cruzeiro
+                        </div>
+                        <div class="cell">
+                          Informações/Editar
+                        </div>
+                      </div>
+                        
+                    </div>
+            
+                    <!--PAGINAÇÃO-->
+                    <div style="margin-top: 20px;" id="pagination"></div>
+                    
+                  </div>
                 </div>
             </div>
         </div>
     </header>
     <!-- end of header -->
 
-    <div class="container" style="margin-bottom: 50px;">
-      <button id="add-aircraft-button" class="btn btn-submit button2">ADICIONAR AERONAVE ✚</button>
-      <div id="main-dashboard" class="main-dashboard">
-
-        <div id="aircraft-list"> <!--class="table"-->
-          <div class="row-list header">
-            <div class="cell">
-              Modelo
-            </div>
-            <div class="cell">
-              Tripulação
-            </div>
-            <div class="cell">
-              Número de passageiros
-            </div>
-            <div class="cell">
-              Velocidade de cruzeiro
-            </div>
-            <div class="cell">
-              Informações/Editar
-            </div>
-          </div>
-            
+    <!--Check list-->
+    <!--<div class="container">
+      <div class="card">
+        <div class="card-header">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="selectAll"
+                id="masterCheck"
+              />
+              <label class="form-check-label" for="masterCheck">
+                Select / Unselect All
+              </label>
+            </li>
+          </ul>
         </div>
-
-        <!--PAGINAÇÃO-->
-        <div style="margin-top: 20px;" id="pagination"></div>
-        
+        <div class="card-body">
+          <ul class="list-group list-group-flush" id="list-wrapper">
+            <li class="list-group-item">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="item1"
+                id="item1"
+              />
+              <label class="form-check-label" for="item1">
+                Item 1
+              </label>
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="item2"
+                id="item2"
+              />
+              <label class="form-check-label" for="item2">
+                Item 2
+              </label>
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="item3"
+                id="item3"
+              />
+              <label class="form-check-label" for="item3">
+                Item 3
+              </label>
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="item4"
+                id="item4"
+              />
+              <label class="form-check-label" for="item4">
+                Item 4
+              </label>
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="item5"
+                id="item5"
+              />
+              <label class="form-check-label" for="item5">
+                Item 5
+              </label>
+            </li>
+            <li class="list-group-item" id="selected-values"></li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </div>-->
+    <!--End check list-->
 
     <!-- Footer -->
     <div class="footer footer-border">
